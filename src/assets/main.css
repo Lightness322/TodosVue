@@ -1,0 +1,12 @@
+@import './base.css';
+:root {
+  --bg-color: #e1f0da;
+  --bg-content-color: #f8fae5;
+  --border-color: #bfd8af;
+  --btn-color: #99bc85;
+  --btn-color-hover: #a6cc8e;
+  --todo-color: #e5ede1;
+}
+html {
+  font-family: 'Lora', sans-serif;
+}
