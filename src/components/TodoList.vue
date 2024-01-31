@@ -24,4 +24,10 @@ defineEmits(['confirm', 'postpone'])
   flex-direction: column;
   gap: 10px;
 }
+@media (max-width: 576px) {
+  .todos {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
 </style>

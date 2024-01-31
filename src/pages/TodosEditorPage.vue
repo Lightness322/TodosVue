@@ -89,4 +89,10 @@ const updateTodo = useUpdateTodo(todos, selectedTodo, isUpdateModalShow)
   font-size: 1.5rem;
   color: #8d7b68;
 }
+@media (max-width: 576px) {
+  .btn__row {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
 </style>

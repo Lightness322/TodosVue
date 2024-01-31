@@ -11,7 +11,7 @@ defineEmits(['confirm', 'postpone'])
 <template>
   <li class="todo">
     <button class="confirm" @click="$emit('confirm', todo.id)">
-      <v-icon name="ri-checkbox-circle-fill" scale="2" />
+      <v-icon class="icon" name="ri-checkbox-circle-fill" scale="2" />
     </button>
     <div class="content">
       {{ todo.content }}
@@ -59,5 +59,21 @@ defineEmits(['confirm', 'postpone'])
 .list-leave-to {
   opacity: 0;
   transform: translateX(30px);
+}
+@media (max-width: 576px) {
+  .todo {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .todo {
+    font-size: 0.95rem;
+  }
+  .icon {
+    max-height: 30px;
+  }
+  .confirm {
+    padding: 0px 2px;
+  }
 }
 </style>

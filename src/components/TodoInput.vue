@@ -47,4 +47,10 @@ const handleCreateToto = () => {
 .add__btn:hover {
   color: var(--btn-color-hover);
 }
+@media (max-width: 576px) {
+  .creation__block {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
 </style>

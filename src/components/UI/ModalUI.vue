@@ -33,6 +33,8 @@ defineEmits(['close'])
   align-items: center;
 }
 .content {
+  max-width: 100%;
+  margin: 5px;
   padding: 20px;
   border-radius: 20px;
   background-color: white;

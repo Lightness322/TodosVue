@@ -22,10 +22,10 @@ const { daysString, datesString, isDays, isDates } = useGetTodoInfo(todo)
       {{ todo.content }}
     </div>
     <button class="settings" @click="$emit('update', todo)">
-      <v-icon name="bi-gear-fill" scale="2" />
+      <v-icon class="icon" name="bi-gear-fill" scale="2" />
     </button>
     <button class="delete" @click="$emit('delete', todo.id)">
-      <v-icon name="bi-x-circle-fill" scale="2" />
+      <v-icon class="icon" name="bi-x-circle-fill" scale="2" />
     </button>
   </li>
 </template>
@@ -63,7 +63,7 @@ const { daysString, datesString, isDays, isDates } = useGetTodoInfo(todo)
   color: var(--btn-color);
 }
 .info {
-  width: 135px;
+  width: 85px;
   padding: 0px 5px;
 
   display: flex;
@@ -72,7 +72,10 @@ const { daysString, datesString, isDays, isDates } = useGetTodoInfo(todo)
   font-size: 0.8rem;
   font-weight: 500;
 }
+
 .content {
+  padding: 0px 2px;
+
   flex-grow: 1;
 
   text-align: center;
@@ -81,6 +84,8 @@ const { daysString, datesString, isDays, isDates } = useGetTodoInfo(todo)
   height: 100%;
   padding: 0px 10px;
   border-left: 1px solid var(--border-color);
+
+  flex-shrink: 0;
 
   color: #5c8374;
 }
@@ -92,9 +97,32 @@ const { daysString, datesString, isDays, isDates } = useGetTodoInfo(todo)
   padding: 0px 10px;
   border-left: 1px solid var(--border-color);
 
+  flex-shrink: 0;
+
   color: #be6c64;
 }
 .delete:hover {
   color: #d78c85;
+}
+@media (max-width: 576px) {
+  .todo {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 450px) {
+  .todo {
+    font-size: 0.95rem;
+  }
+  .info {
+    font-size: 0.75rem;
+    width: 75px;
+  }
+  .icon {
+    max-height: 30px;
+  }
+  .settings,
+  .delete {
+    padding: 0px 2px;
+  }
 }
 </style>

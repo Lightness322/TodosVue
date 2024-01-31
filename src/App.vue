@@ -33,4 +33,10 @@ import AppHeader from '@/components/AppHeader.vue'
   flex-direction: column;
   gap: 25px;
 }
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0px 10px;
+  }
+}
 </style>

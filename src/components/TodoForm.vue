@@ -39,7 +39,7 @@ const handleCreate = () => {
     </div>
     <div class="row">
       <div class="name">Дни месяца</div>
-      <select class="select" multiple size="5" v-model.number="dates">
+      <select class="select" multiple v-model.number="dates">
         <option class="option" v-for="n in 31" :key="n">{{ n }}</option>
       </select>
     </div>
@@ -49,42 +49,40 @@ const handleCreate = () => {
 
 <style scoped>
 .form {
-  width: 820px;
+  width: 100%;
+  max-width: 820px;
   padding: 40px;
 
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
-.select {
-  height: 28px;
-  outline: auto;
-  outline-color: var(--border-color);
-  overflow-y: hidden;
-
-  user-select: none;
-  text-align: center;
-}
-.select:focus {
-  outline-color: var(--border-color);
+.input {
+  width: 100%;
 }
 .row {
   display: grid;
   grid-template-columns: 100px 1fr;
   align-items: center;
 }
-.checkbox {
-  height: 18px;
-  width: 18px;
-
-  filter: hue-rotate(220deg);
-  cursor: pointer;
-}
 .name {
   text-decoration: underline;
   text-decoration-color: var(--border-color);
   text-underline-offset: 4px;
   font-weight: 500;
+}
+.select {
+  height: 28px;
+  outline: auto;
+  outline-color: var(--border-color);
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  user-select: none;
+  text-align: center;
+}
+.select:focus {
+  outline-color: var(--border-color);
 }
 .option {
   padding: 4px 3.4px;
@@ -93,9 +91,17 @@ const handleCreate = () => {
 
   filter: hue-rotate(220deg);
 }
+.checkbox {
+  height: 18px;
+  width: 18px;
+
+  filter: hue-rotate(220deg);
+  cursor: pointer;
+}
 .days {
   display: flex;
   gap: 10px;
+  overflow-x: auto;
 
   font-size: 1.1rem;
 }
@@ -104,10 +110,18 @@ const handleCreate = () => {
   align-items: center;
   gap: 5px;
 }
-.input {
-  width: 100%;
-}
+
 .btn {
   margin: 0 auto;
+}
+@media (max-width: 880px) {
+  .form {
+    padding: 20px;
+  }
+}
+@media (max-width: 580px) {
+  .form {
+    padding: 10px;
+  }
 }
 </style>

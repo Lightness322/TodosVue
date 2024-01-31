@@ -47,4 +47,14 @@
   color: #b19470;
   border-bottom: 5px solid #b19470;
 }
+@media (max-width: 576px) {
+  .header {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    font-size: 1.25rem;
+  }
+}
 </style>

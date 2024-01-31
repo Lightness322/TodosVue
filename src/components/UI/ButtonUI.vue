@@ -25,4 +25,9 @@ defineOptions({
 
   color: var(--btn-color);
 }
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.9rem;
+  }
+}
 </style>
