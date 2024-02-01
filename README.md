@@ -11,7 +11,7 @@
 
 ### Используемые технологи:
 
-- Фреймворк: Vue + TypeScript
+- Фреймворк: Vue.js + TypeScript
 
 _[Посмотреть сайт на netlify](https://todosevrdy.netlify.app/)_
 
